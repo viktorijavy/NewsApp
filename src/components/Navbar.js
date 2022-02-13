@@ -1,21 +1,24 @@
 import React from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+
+
     return (
 
-
-        <>
-            <nav>
-              <ul>
-                  <li> Search News </li>
-                  <li> Trending news by country </li>
-                  <li> Weather forecast </li>
-              </ul>
-            </nav>
-
-        </>
+<div id="navbar"> 
+  <ul> 
+	<li> <Link to={'/searchNews'}> Search News</Link> </li> 
+	<li> <Link to={'/popularNews'}> Popular News</Link></li> 
+	<li> <Link to={'/weather'}> Weather forecast</Link></li> 
+	
+  </ul> 
+</div> 
+ 
+    
     )
+    
 }
 
 export default Navbar
