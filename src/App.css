@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+
+
+html {
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 3rem;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  background-color: #f8f9fa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.showcase {
+
+  background-image: linear-gradient(
+    rgba(53, 53, 53, 0.8),
+    rgba(92, 92, 92, 0.8)
+  ),
+  url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.showcase .overlay {
+  height: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
 }
 
-.App-link {
-  color: #61dafb;
+.input-text {
+  color: black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+  max-width: 20rem;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+a {
+  text-decoration: underline;
 }
