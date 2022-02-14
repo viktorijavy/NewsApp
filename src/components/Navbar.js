@@ -7,18 +7,11 @@ const Navbar = () => {
 
     return (
 
-        <div className="navbar">
-
-            <nav>
-                <ul>
-                    <li> <Link to={'/searchNews'}> Search News</Link> </li>
-                    <li> <Link to={'/popularNews'}> Popular News</Link></li>
-                    <li> <Link to={'/weather'}> Weather forecast</Link></li>
-
-                </ul>
-            </nav>
-        </div>
-
+        <nav>
+            <div className='nav-item' ><Link style={{textDecoration: "none"}} to={'/searchNews'}> Search News</Link> </div>
+            <div className='nav-item'><Link style={{textDecoration: "none"}} to={'/popularNews'}> Popular News by country</Link></div>
+            <div className='nav-item'><Link style={{textDecoration: "none"}} to={'/weather'}> Weather forecast</Link></div>
+        </nav>
 
     )
 

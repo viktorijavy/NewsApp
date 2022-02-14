@@ -26,14 +26,22 @@ const PopularNews = () => {
 
   
     return (
-
+        
 
         <div>
+            <header className="showcase">
+                <div className="overlay px-5">
+                    <h1 className='text-center'> Popular news in Lithuania </h1>
+
+                
+                </div>
+
+            </header>
 
 
-            <section>
+            <section className='grid grid-cols-3 gap-3 card'>
 
-                <h1> Trending news in Lithuania </h1>
+               
 
                 {articles.map(article => <ArticleCard article={article}/>)}
 

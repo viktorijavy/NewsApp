@@ -17,9 +17,9 @@ const ArticleCard = ({ article }) => {
                 <h1 className="card-header"> {article.title}</h1>
                 <p> {article.source.name}</p>
             
-                {article.author != null ? <p> by {article.author}</p> : <p></p>}
+                {/* {article.author != null ? <p> by {article.author}</p> : <p></p>} */}
 
-                <p className="mt-3"> {article.description}</p>
+                <p className="mt-3"> {article.description.slice(0, 170)}</p>
                 <p> {article.publishedAt.slice(0, 10)}</p>
                 <div>
                 <a className="button" href={article.url}> Read the article </a>

@@ -1,8 +1,10 @@
 .card-container {
-    max-width: 50rem;
+    max-width: 43rem;
+    
     background-color: #f8f9fa;
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
    
     
 }
@@ -22,13 +24,14 @@ img {
 .button {
     background-color: #90e0ef;
     padding: 1rem;
-    max-width: 15rem;
+    max-width: 12rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     display: block;
     text-decoration: none;
+    font-size: 1.3rem;
 }
 
 a:hover {

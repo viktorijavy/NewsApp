@@ -14,7 +14,7 @@ const App = () => {
   return (
 
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Routes>
 

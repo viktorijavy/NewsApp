@@ -13,16 +13,18 @@ const Search = ({ searchText }) => {
     }
     return (
         <>
+        
             <form onSubmit={handleSubmit} className="form">
                 <input
-                    className="input-text py-1 px-2 rounded-l-lg"
+                    className="input-text"
                     type="text"
                     onChange={(e) => setText(e.target.value)}
                    
                 />
-                <button type="submit" className='bg-green-400 py-1 px-2 rounden-l-lg'>submit</button>
+                <button type="submit" className='bg-green-400 '>submit</button>
 
             </form>
+           
         </>
     )
 }

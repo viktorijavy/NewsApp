@@ -1,0 +1,46 @@
+ .showcase {
+
+    background-image: 
+    url("https://images.unsplash.com/photo-1579532582940-957ceba4f373?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80");
+  
+    background-size: cover;
+    background-position: top;
+    margin: 3rem;
+    
+    
+  
+  
+  }
+  
+  .showcase .overlay {
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 4rem;
+  }
+  
+  .input-text {
+    color: black;
+    max-width: 100%;
+    border-radius: 2rem;
+  }
+  .form {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  a {
+    text-decoration: underline;
+  } 
+
+  .card {
+      margin-left: 3rem;
+      margin-top: 5rem;
+  }
+
+  
