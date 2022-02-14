@@ -7,7 +7,7 @@ import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import SearchNews from './pages/SearchNews';
-import PopularNews from './components/PopularNews';
+import PopularNews from './pages/PopularNews';
 
 const App = () => {
 

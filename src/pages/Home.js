@@ -1,12 +1,17 @@
-
+import backgroundvideo from '../production ID_3944852.mp4';
 
 const Home = () => {
     return (
 
         <>
 
-            <h1>Hello and welcome to the news!</h1>
-            
+<video autoPlay="autoplay" loop="loop" muted>
+        <source
+          src={backgroundvideo}
+          type="video/mp4"
+        />
+       
+      </video>
         </>
     )
 }
