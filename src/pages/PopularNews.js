@@ -2,7 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import ArticleCard from '../components/ArticleCard';
-//  import ArticleCard from './ArticleCard';
+import { Link } from 'react-router-dom';
+
+
 
 
 const PopularNews = () => {
@@ -21,35 +23,31 @@ const PopularNews = () => {
             .catch(error => console.log(error))
     }, [])
 
-   
-
 
   
     return (
         
 
-        <div>
-            <header className="showcase">
-                <div className="overlay px-5">
-                    <h1 className='text-center'> Popular news in Lithuania </h1>
+        <>
 
-                
+
+
+            <header  className="showcase">
+                <div className="overlay">
+                    <h1 className='text-center'> Popular news in Lithuania </h1>
+           
                 </div>
 
             </header>
 
-
-            <section className='grid grid-cols-3 gap-3 card'>
-
-               
+          <section className='grid grid-cols-3 gap-3 card'>
 
                 {articles.map(article => <ArticleCard article={article}/>)}
-
-              
+ 
             </section>
 
 
-        </div>
+        </>
     )
 }
 

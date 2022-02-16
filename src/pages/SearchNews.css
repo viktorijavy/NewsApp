@@ -1,19 +1,17 @@
  .showcase {
 
     background-image: 
-    url("https://images.unsplash.com/photo-1579532582940-957ceba4f373?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80");
-  
+    url("https://images.unsplash.com/photo-1582079768266-e65af1ad8d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+    
     background-size: cover;
-    background-position: top;
-    margin: 3rem;
+    background-position: center;
+   
     
-    
-  
-  
   }
   
   .showcase .overlay {
-    height: 40rem;
+   
+    height: 55rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,19 +19,27 @@
     color: white;
     text-transform: uppercase;
     font-size: 4rem;
+    width: 100%;
   }
   
   .input-text {
     color: black;
-    max-width: 100%;
-    border-radius: 2rem;
+    width: 80rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    border:none;
+    
   }
+
+  
   .form {
     max-width: 100%;
     display: flex;
     justify-content: center;
     font-size: 2rem;
+    margin-top: 2rem;
   }
+
   a {
     text-decoration: underline;
   } 

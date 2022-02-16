@@ -7,7 +7,7 @@ const Home = () => {
     return (
 
         <>
-        <Navbar/>
+       
 
             <video autoPlay="autoplay" loop="loop" muted>
                 <source

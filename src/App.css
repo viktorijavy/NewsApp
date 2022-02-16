@@ -13,3 +13,17 @@ body {
   font-family: 'Arial';
 }
 
+.btn {
+   border-radius: 1rem;
+   margin-left: 1rem;
+   padding: 1rem 2rem;
+   background-color: #4a4e69;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  background-color: #9a8c98;
+}
+.btn:active {
+  transform: translate(-1px, 1px)
+}

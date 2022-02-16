@@ -19,9 +19,10 @@ const Search = ({ searchText }) => {
                     className="input-text"
                     type="text"
                     onChange={(e) => setText(e.target.value)}
+                    placeholder="e.g. politics"
                    
                 />
-                <button type="submit" className='bg-green-400 '>submit</button>
+                <button type="submit" className='btn'>search</button>
 
             </form>
            

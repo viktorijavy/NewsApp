@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Search from '../components/Search';
 import ArticleCard from '../components/ArticleCard';
+import Navbar from '../components/Navbar';
 import './SearchNews.css'
 
 
@@ -35,8 +36,10 @@ const SearchNews = () => {
 
 
         <div>
+
+       
             <header className="showcase">
-                <div className="overlay px-5">
+                <div className="overlay">
                     <h1 className='text-center'> viewing articles about {query}</h1>
 
                     <Search searchText={(text) => setQuery(text)} />
