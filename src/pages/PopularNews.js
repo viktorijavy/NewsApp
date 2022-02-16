@@ -2,7 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import ArticleCard from '../components/ArticleCard';
-import { Link } from 'react-router-dom';
+import Search2 from '../components/Search2';
+
 
 
 
@@ -12,16 +13,17 @@ const PopularNews = () => {
     const API_KEY = process.env.REACT_APP_API_KEY
 
     const [articles, setArticles] = useState([])
+    const [ country, setCountry ] = useState('us')
 
 
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=lt&apiKey=${API_KEY}`)
+        axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${API_KEY}`)
             .then(response => {
                 console.log(response)
                 setArticles(response.data.articles)
             })
             .catch(error => console.log(error))
-    }, [])
+    }, [country])
 
 
   
@@ -34,8 +36,8 @@ const PopularNews = () => {
 
             <header  className="showcase">
                 <div className="overlay">
-                    <h1 className='text-center'> Popular news in Lithuania </h1>
-           
+                    <h1 className='text-center'> Popular news in {country} </h1>
+                    <Search2 searchCountry={(text) => setCountry(text)}/>
                 </div>
 
             </header>

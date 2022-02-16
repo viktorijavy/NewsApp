@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Search from '../components/Search';
 import ArticleCard from '../components/ArticleCard';
-import Navbar from '../components/Navbar';
+
 import './SearchNews.css'
 
 
@@ -13,7 +13,7 @@ const SearchNews = () => {
     const [articles, setArticles] = useState([])
     const [query, setQuery] = useState('Trump')
     const [isLoading, setIsLoading] = useState(true)
-    // const [ popularArticles, setPopularArticles ] = useState([])
+    
 
 
     useEffect(() => {

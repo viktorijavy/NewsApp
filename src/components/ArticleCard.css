@@ -5,9 +5,15 @@
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     margin-bottom: 3rem;
-   
-    
 }
+
+.card-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.6); 
+    transition: 0.7s;
+}
+    
+
 img {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
