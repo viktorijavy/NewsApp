@@ -51,7 +51,7 @@ const SearchNews = () => {
 
             {isLoading ? (<h1>Loading...</h1>) : (
 
-                <section className='grid grid-cols-3 gap-3 card'>
+                <section className='card grid'>
                     {articles.map(article =>
 
                         <ArticleCard article={article} />

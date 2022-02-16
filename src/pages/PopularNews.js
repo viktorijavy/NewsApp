@@ -32,17 +32,15 @@ const PopularNews = () => {
 
         <>
 
-
-
             <header  className="showcase">
                 <div className="overlay">
-                    <h1 className='text-center'> Popular news in {country} </h1>
+                    <h1 className='text-center'> Trending news in {country} </h1>
                     <Search2 searchCountry={(text) => setCountry(text)}/>
                 </div>
 
             </header>
 
-          <section className='grid grid-cols-3 gap-3 card'>
+          <section className='card grid'>
 
                 {articles.map(article => <ArticleCard article={article}/>)}
  
@@ -52,5 +50,7 @@ const PopularNews = () => {
         </>
     )
 }
+
+// grid grid-cols-3 gap-3
 
 export default PopularNews

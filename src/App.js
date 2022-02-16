@@ -1,9 +1,7 @@
-// import axios from 'axios';
-// import React, { useState, useEffect } from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-// import Search from './components/Search';
-// import ArticleCard from './components/ArticleCard';
+import Weather from './pages/Weather';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import SearchNews from './pages/SearchNews';
@@ -22,6 +20,7 @@ const App = () => {
 
         <Route path="/searchNews" element={<SearchNews/>}/>
         <Route path="/popularNews" element={<PopularNews/>}/>
+        <Route path="/weather" element={<Weather/>}/>
 
       </Routes>
     </>

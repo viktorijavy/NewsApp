@@ -1,5 +1,4 @@
 import backgroundvideo from '../production ID_3944852.mp4';
-import Navbar from '../components/Navbar';
 
 const Home = () => {
 

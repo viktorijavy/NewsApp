@@ -19,7 +19,7 @@ const Search = ({ searchCountry }) => {
                     className="input-text"
                     type="text"
                     onChange={(e) => setText(e.target.value)}
-                    placeholder="e.g. lt"
+                    placeholder=" type in country code, e.g. lt"
                    
                 />
                 <button type="submit" className='btn'>search</button>
