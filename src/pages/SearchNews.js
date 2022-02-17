@@ -11,7 +11,7 @@ const SearchNews = () => {
     const API_KEY = process.env.REACT_APP_API_KEY
 
     const [articles, setArticles] = useState([])
-    const [query, setQuery] = useState('Trump')
+    const [query, setQuery] = useState('Ukraine')
     const [isLoading, setIsLoading] = useState(true)
     
 
@@ -22,7 +22,7 @@ const SearchNews = () => {
 
             .then((response) => {
 
-                console.log(response.data.articles)
+                console.log(response.data)
                 setArticles(response.data.articles)
                 setIsLoading(false)
             })
