@@ -7,14 +7,15 @@ const Home = () => {
 
         <>
        
-
-            <video autoPlay="autoplay" loop="loop" muted>
+        <div className='video-wrapper'>
+            <video className='video1' autoPlay="autoplay" loop="loop" muted>
                 <source
                     src={backgroundvideo}
                     type="video/mp4"
                 />
 
             </video>
+            </div>
         </>
     )
 }

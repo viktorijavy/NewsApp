@@ -26,7 +26,7 @@ const Navbar = () => {
 
 
                 </ul>
-                <h1 className="logo">VICTORIA</h1>
+                <h1 className="logo">NEWS</h1>
             </div>
         </nav>
 

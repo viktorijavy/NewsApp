@@ -12,7 +12,7 @@ const Weather = () => {
     const API_KEY2 = process.env.REACT_APP_WEATHER_API_KEY
 
 
-    const [city, setCity] = useState('buenos aires')
+    const [city, setCity] = useState('berlin')
     const [data, setData] = useState([])
 
 
@@ -37,9 +37,9 @@ const Weather = () => {
 
         <>
 
-            {/* <div className="weather-background-container"> */}
+           
 
-            <div className='weather-background'>
+            <div className='video-wrapper'>
                   
 
                 {data.weather ?
@@ -68,7 +68,7 @@ const Weather = () => {
 
 
               
-                <WeatherCard data={data} />
+                <WeatherCard data={data} searchCity={(text => setCity(text))}/>
 
 
             </div>

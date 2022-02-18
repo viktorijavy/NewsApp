@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Quicksand&family=Raleway:wght@100;200&family=Zen+Kaku+Gothic+New:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300&family=Montserrat:wght@100;200;300&family=Open+Sans:wght@300&family=Quicksand&family=Raleway:wght@100;200;400&family=Zen+Kaku+Gothic+New:wght@300&display=swap');
 
 html {
   font-size: 62.5%;
@@ -10,7 +10,7 @@ body {
   box-sizing: border-box;
   font-size: 1.5rem;
   background-color: white;
-  font-family: "Arial";
+  font-family: "Montserrat";
 }
 
 .btn {
@@ -49,41 +49,23 @@ body {
 
 
 
-.weather-background {
+.video-wrapper {
+  
+  width: 100vw;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
+  text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
-  
- 
-
+  justify-content: center;
 }
 
-.w-overlay {
-  
-  z-index: 100;
-  position:absolute;
-  width: 40rem;
-  background-color: rgba(236, 231, 231, 0.2);
-  width: 40rem;
-  height: 50rem;
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 2.5rem;
-  align-items: center;
-  border-radius: 1rem;
-  color: white;
-  
-
-  
-
-
-}
-
-.w-h1 {
-  font-size: 4rem;
-  color: white;
-  font-weight: 700;
-
+.video1 {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
