@@ -17,6 +17,7 @@
 img {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    
 }
 
 .card-container-text {
@@ -60,4 +61,11 @@ img {
 .article-source {
     font-size: 1.5rem;
     padding-top: 1rem;
+}
+
+@media (max-width: 500px) {
+    .card-container {
+        width: 34rem;
+        
+    }
 }

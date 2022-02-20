@@ -22,7 +22,7 @@ const Search = ({ searchCountry }) => {
                     placeholder=" type in country code, e.g. lt"
                    
                 />
-                <button type="submit" className='btn'>search</button>
+                {/* <button type="submit" className='btn'>search</button> */}
 
             </form>
            

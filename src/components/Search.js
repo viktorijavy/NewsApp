@@ -19,10 +19,10 @@ const Search = ({ searchText }) => {
                     className="input-text"
                     type="text"
                     onChange={(e) => setText(e.target.value)}
-                    placeholder="e.g. politics"
+                    placeholder="e.g. Trump"
                    
                 />
-                <button type="submit" className='btn'>search</button>
+                {/* <button type="submit" className='btn'>search</button> */}
 
             </form>
            

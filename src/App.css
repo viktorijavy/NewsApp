@@ -27,29 +27,44 @@ body {
 .btn:active {
   transform: translate(-1px, 1px);
 }
-
-@media (max-width: 500px) {
+ 
+ @media (max-width: 500px) {
   .input-text {
     font-size: 1.2rem;
-    width: 50rem;
-  }
-  .text-center {
-    font-size: 2rem;
-  }
-  .card-container {
-   width: 26rem;
-   margin: 0;
     
   }
+  .text-center {
+    font-size: 1.5rem;
+  }
+  
   .showcase {
     width:100%;
   }
+  .btn {
+    width: 6rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  .overlay {
+    width: 100%;
+    
+  }
+} 
 
-}
+ @media (max-width: 375px) {
+ .form {
+   width: 30rem;
+ }
+ .input-text {
+   width: 25rem;
+ }
+ 
+}  
 
 
 
-.video-wrapper {
+
+ .video-wrapper {
   
   width: 100vw;
   height: 100vh;
@@ -68,4 +83,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-}
+}  
+
+
+

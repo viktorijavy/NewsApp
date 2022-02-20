@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import backgroundvideo from '../rain.mp4'
-import cloudyBackground from '../clouds.mp4'
+import backgroundvideo from '../rainy.mp4'
+import cloudyBackground from '../cloudySky.mp4'
 import sunnyBackground from '../sunshine.mp4'
 import WeatherCard from '../components/WeatherCard';
 
@@ -37,8 +37,6 @@ const Weather = () => {
 
         <>
 
-           
-
             <div className='video-wrapper'>
                   
 
@@ -63,9 +61,6 @@ const Weather = () => {
 
                     </video>
                     : null}
-
-              
-
 
               
                 <WeatherCard data={data} searchCity={(text => setCity(text))}/>

@@ -47,8 +47,9 @@
     list-style: none;
     margin-left: 3.5rem;
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
+    font-weight: 700;
     
   }
   
@@ -60,7 +61,7 @@
   }
   
   .menu-items a:hover {
-    color: #117964;
+    color: #4a4e69;
     transition: color 0.3s ease-in-out;
   }
   
