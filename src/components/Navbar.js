@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
-
     return (
-
-      
 
         <nav className="navbar">
             <div className="navbar-container container">
@@ -22,9 +19,6 @@ const Navbar = () => {
                     <li><Link style={{ textDecoration: "none" }} to={'/searchNews'}> Search News</Link></li>
                     <li><Link style={{ textDecoration: "none" }} to={'/popularNews'}> Trending News</Link></li>
                     <li><Link style={{ textDecoration: "none" }} to={'/weather'}> Weather</Link></li>
-
-
-
                 </ul>
                 <h1 className="logo">NEWS</h1>
             </div>

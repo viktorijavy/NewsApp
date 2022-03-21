@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Search from '../components/Search';
 import ArticleCard from '../components/ArticleCard';
-
 import './SearchNews.css'
 
 
@@ -13,12 +12,9 @@ const SearchNews = () => {
     const [articles, setArticles] = useState([])
     const [query, setQuery] = useState('Ukraine')
     const [isLoading, setIsLoading] = useState(true)
-    
-
 
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/everything?q=${query}&from=2022-02-13&sortBy=popularity&apiKey=${API_KEY}`)
-
+        axios.get(`https://newsapi.org/v2/everything?q=${query}&from=2022-03-20&sortBy=popularity&apiKey=${API_KEY}`)
 
             .then((response) => {
 
@@ -34,10 +30,8 @@ const SearchNews = () => {
 
     return (
 
-
         <div>
 
-       
             <header className="showcase">
                 <div className="overlay">
                     <h1 className='text-center'> viewing articles about {query}</h1>
@@ -47,23 +41,20 @@ const SearchNews = () => {
 
             </header>
 
-
-
-            {isLoading ? (<h1>Loading...</h1>) : (
+            {isLoading ? (
+                <h1>Loading...</h1>
+            ) : (
 
                 <section className='card grid'>
-                    {articles.map(article =>
 
-                        <ArticleCard article={article} />
+                    {articles.length === 0 ? <p>Nothing to show here </p> : articles.map(article =>
+
+                        <ArticleCard key={Math.random().toString(32).slice(2, 8)} article={article} />
                     )}
 
 
-                </section>)}
-
-
-
-
-
+                </section>
+            )}
         </div>
     );
 }

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import sunnyIcon from '../clear-sky.png'
 import cloudyIcon from '../cloudy.png'
 import rainyIcon from '../Rainy.png'
-// import sunCloudIcon from '../../public/cloudy-sun.png'
+
 
 const WeatherCard = (props) => {
 
@@ -12,15 +12,9 @@ const WeatherCard = (props) => {
   const handleSubmit = e => {
     e.preventDefault()
     props.searchCity(text)
-
-
-
-
   }
 
   return (
-
-
     <>
       <div className="weather-card">
 
@@ -40,16 +34,9 @@ const WeatherCard = (props) => {
 
           <h1> {props.data.name} </h1>
 
-
-
-          {/* <img src={sunnyPic} alt="sunny icon"/> */}
-
           {props.data.main ?
 
-
             <h1>{Math.round(props.data.main.temp)} °C</h1>
-
-
 
             : null}
 
@@ -73,8 +60,6 @@ const WeatherCard = (props) => {
             : null
           }
 
-
-
           {props.data.main ?
             <p> Feels like: {Math.round(props.data.main.feels_like)} </p>
             : null}
@@ -83,8 +68,6 @@ const WeatherCard = (props) => {
             <p> Humidity: {props.data.main.humidity}</p>
             : null}
         </div>
-
-
 
       </div>
     </>

@@ -17,6 +17,11 @@
 img {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    max-height: 30rem;
+    width: 100%;
+    object-fit:cover;
+    
+    
     
 }
 

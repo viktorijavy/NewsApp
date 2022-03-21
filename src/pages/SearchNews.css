@@ -29,7 +29,14 @@
     border-radius: 1rem;
     padding: 0.5rem 1.5rem;
     border:none;
+    outline: none;
     
+  }
+  .input-text:hover {
+    outline: none;
+  }
+  .input-text:active {
+    outline:none;
   }
 
   

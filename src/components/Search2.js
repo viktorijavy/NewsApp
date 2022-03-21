@@ -9,11 +9,9 @@ const Search = ({ searchCountry }) => {
         e.preventDefault()
         searchCountry(text)
         
-
     }
     return (
-        <>
-        
+        <>    
             <form onSubmit={handleSubmit} className="form">
                 <input
                     className="input-text"

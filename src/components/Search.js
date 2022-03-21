@@ -8,12 +8,9 @@ const Search = ({ searchText }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         searchText(text)
-        
-
     }
     return (
         <>
-        
             <form onSubmit={handleSubmit} className="form">
                 <input
                     className="input-text"

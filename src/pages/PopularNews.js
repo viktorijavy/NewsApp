@@ -5,9 +5,6 @@ import ArticleCard from '../components/ArticleCard';
 import Search2 from '../components/Search2';
 
 
-
-
-
 const PopularNews = () => {
 
     const API_KEY = process.env.REACT_APP_API_KEY
@@ -26,13 +23,9 @@ const PopularNews = () => {
             .catch(error => console.log(error))
     }, [country])
 
-
-  
     return (
-        
-
+    
         <>
-
             <header  className="showcase">
                 <div className="overlay">
                     <h1 className='text-center'> Trending news in {country} </h1>
@@ -43,15 +36,14 @@ const PopularNews = () => {
 
           <section className='card grid'>
 
-                {articles.map(article => <ArticleCard article={article}/>)}
+                {articles.map(article => <ArticleCard key={Math.random().toString(32).slice(2,8)} article={article}/>)}
  
             </section>
-
 
         </>
     )
 }
 
-// grid grid-cols-3 gap-3
+
 
 export default PopularNews

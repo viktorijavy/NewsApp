@@ -5,16 +5,14 @@ import cloudyBackground from '../cloudySky.mp4'
 import sunnyBackground from '../sunshine.mp4'
 import WeatherCard from '../components/WeatherCard';
 
-
-
 const Weather = () => {
+
+   
 
     const API_KEY2 = process.env.REACT_APP_WEATHER_API_KEY
 
-
     const [city, setCity] = useState('berlin')
     const [data, setData] = useState([])
-
 
     useEffect(() => {
         axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY2}`)
@@ -34,9 +32,7 @@ const Weather = () => {
 
     return (
 
-
         <>
-
             <div className='video-wrapper'>
                   
 
