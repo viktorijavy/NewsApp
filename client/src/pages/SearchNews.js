@@ -25,7 +25,7 @@ const SearchNews = () => {
             .catch(error => {
                 console.log(error)
             })
-    }, [query])
+    }, [query, API_KEY])
 
 
     return (

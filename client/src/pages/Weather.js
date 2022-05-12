@@ -7,7 +7,7 @@ import WeatherCard from '../components/WeatherCard';
 
 const Weather = () => {
 
-   
+
 
     const API_KEY2 = process.env.REACT_APP_WEATHER_API_KEY
 
@@ -27,14 +27,14 @@ const Weather = () => {
             })
 
             .catch(error => console.log(error))
-    }, [city])
+    }, [city, API_KEY2])
 
 
     return (
 
         <>
             <div className='video-wrapper'>
-                  
+
 
                 {data.weather ?
 
@@ -58,14 +58,9 @@ const Weather = () => {
                     </video>
                     : null}
 
-              
-                <WeatherCard data={data} searchCity={(text => setCity(text))}/>
-
+                <WeatherCard data={data} searchCity={(text => setCity(text))} />
 
             </div>
-
-
-
 
         </>
     )

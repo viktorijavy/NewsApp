@@ -10,7 +10,7 @@ const PopularNews = () => {
     const API_KEY = process.env.REACT_APP_API_KEY
 
     const [articles, setArticles] = useState([])
-    const [ country, setCountry ] = useState('us')
+    const [ country, setCountry ] = useState('lt')
 
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const PopularNews = () => {
                 
             })
             .catch(error => console.log(error))
-    }, [country])
+    }, [country, API_KEY])
 
     return (
     
