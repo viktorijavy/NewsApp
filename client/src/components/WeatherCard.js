@@ -1,8 +1,8 @@
 import './WeatherCard.css'
 import { useState } from 'react'
-import sunnyIcon from '../clear-sky.png'
-import cloudyIcon from '../cloudy.png'
-import rainyIcon from '../Rainy.png'
+import sunnyIcon from '../images-and-videos/clear-sky.png'
+import cloudyIcon from '../images-and-videos/cloudy.png'
+import rainyIcon from '../images-and-videos/Rainy.png'
 
 
 const WeatherCard = (props) => {

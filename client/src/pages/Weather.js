@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import backgroundvideo from '../rainy.mp4'
-import cloudyBackground from '../cloudySky.mp4'
-import sunnyBackground from '../sunshine.mp4'
+import backgroundvideo from '../images-and-videos/rainy.mp4'
+import cloudyBackground from '../images-and-videos/cloudySky.mp4'
+import sunnyBackground from '../images-and-videos/sunshine.mp4'
 import WeatherCard from '../components/WeatherCard';
+import './Weather.css';
 
 const Weather = () => {
 

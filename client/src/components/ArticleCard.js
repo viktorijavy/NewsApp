@@ -8,7 +8,7 @@ const ArticleCard = ({ article }) => {
                 <div>
 
                     {article.urlToImage === null ? <img src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="pic-not-found" />
-                     : <img src={article.urlToImage} alt="pic" onError={(e) => (e.target.onerror = null , e.target.src ="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")} />}
+                        : <img src={article.urlToImage} alt="pic" />}
                     <div className="card-container-text">
                         <h1 className="card-header"> {article.title}</h1>
                         <p className='article-source'> {article.source.name}</p>
@@ -30,9 +30,6 @@ const ArticleCard = ({ article }) => {
 
 
         </>
-
-
-
 
 
     )

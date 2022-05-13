@@ -1,4 +1,4 @@
-import backgroundvideo from '../production ID_3944852.mp4';
+import backgroundvideo from '../images-and-videos/production ID_3944852.mp4';
 
 const Home = () => {
 
