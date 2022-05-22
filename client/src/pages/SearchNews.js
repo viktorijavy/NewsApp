@@ -42,12 +42,14 @@ const SearchNews = () => {
             </header>
 
             {isLoading ? (
+
                 <h1>Loading...</h1>
+
             ) : (
 
                 <section className='card grid'>
 
-                    {articles.length === 0 ? <p>Nothing to show here </p> : articles.map(article =>
+                    {articles.length === 0 ? <p>Nothing to show here</p> : articles.map(article =>
 
                         <ArticleCard key={Math.random().toString(32).slice(2, 8)} article={article} />
                     )}

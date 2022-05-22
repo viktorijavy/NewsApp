@@ -29,6 +29,7 @@ const PopularNews = () => {
             <header  className="showcase">
                 <div className="overlay">
                     <h1 className='text-center'> Trending news in {country} </h1>
+                    
                     <Search2 searchCountry={(text) => setCountry(text)}/>
                 </div>
 
