@@ -5,3 +5,6 @@
     justify-content: center;
     align-items: center;
 }
+.event-title-large {
+    font-size: 4rem;
+}

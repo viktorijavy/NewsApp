@@ -17,8 +17,8 @@ const Navbar = () => {
                 <ul className="menu-items">
                     <li><Link style={{ textDecoration: "none" }} to={'/'}> Home</Link></li>
                     <li><Link style={{ textDecoration: "none" }} to={'/events'}>Events</Link></li>
-                    <li><Link style={{ textDecoration: "none" }} to={'/searchNews'}> Search News</Link></li>
-                    <li><Link style={{ textDecoration: "none" }} to={'/popularNews'}> Trending News</Link></li>
+                    <li><Link style={{ textDecoration: "none" }} to={'/search-news'}> Search News</Link></li>
+                    <li><Link style={{ textDecoration: "none" }} to={'/popular-news'}> Trending News</Link></li>
                     <li><Link style={{ textDecoration: "none" }} to={'/weather'}> Weather</Link></li>
                 </ul>
                 <h1 className="logo">NEWS</h1>

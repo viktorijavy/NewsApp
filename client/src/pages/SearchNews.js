@@ -13,8 +13,10 @@ const SearchNews = () => {
     const [query, setQuery] = useState('Ukraine')
     const [isLoading, setIsLoading] = useState(true)
 
+    
+
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/everything?q=${query}&from=2022-03-20&sortBy=popularity&apiKey=${API_KEY}`)
+        axios.get(`https://newsapi.org/v2/everything?q=${query}&from=2022-05-01&sortBy=popularity&apiKey=${API_KEY}`)
 
             .then((response) => {
 
