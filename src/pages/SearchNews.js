@@ -7,8 +7,6 @@ import './SearchNews.css'
 
 const SearchNews = () => {
 
-    const API_KEY = process.env.REACT_APP_API_KEY
-
     const [articles, setArticles] = useState([])
     const [query, setQuery] = useState('Ukraine')
     const [isLoading, setIsLoading] = useState(true)
@@ -16,18 +14,17 @@ const SearchNews = () => {
     
 
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/everything?q=${query}&from=2022-05-01&sortBy=popularity&apiKey=${API_KEY}`)
+        axios.get('http://localhost:4000/news') // TODO put host (not endpoint /api) in seperate env vairable because in production will be different
 
             .then((response) => {
-
-                console.log(response.data)
-                setArticles(response.data.articles)
+                console.log(response)
+                setArticles(response.data.payload.articles)
                 setIsLoading(false)
             })
             .catch(error => {
                 console.log(error)
             })
-    }, [query, API_KEY])
+    }, [query])
 
 
     return (
