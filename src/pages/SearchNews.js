@@ -24,7 +24,7 @@ const SearchNews = () => {
             .catch(error => {
                 console.log(error)
             })
-    }, [query])
+    }, [])
 
 
     return (

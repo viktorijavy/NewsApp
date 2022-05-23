@@ -7,21 +7,21 @@ import Search2 from '../components/Search2';
 
 const PopularNews = () => {
 
-    const API_KEY = process.env.REACT_APP_API_KEY
+    
 
     const [articles, setArticles] = useState([])
     const [ country, setCountry ] = useState('lt')
 
 
     useEffect(() => {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${API_KEY}`)
+        axios.get('http://localhost:4000/country-news')
             .then(response => {
                 console.log(response)
-                setArticles(response.data.articles)
+                setArticles(response.data.payload.articles)
                 
             })
             .catch(error => console.log(error))
-    }, [country, API_KEY])
+    }, [])
 
     return (
     
