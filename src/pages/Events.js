@@ -5,11 +5,13 @@ import './Events.css'
 
 const Events = () => {
 
-    // const [bezirk, setBezirk] = useState('Mitte')
+    const [bezirk, setBezirk] = useState('Mitte')
     
-
-    //sort by date, bezirk
-
+    const handleBezirkChange = (e) => {
+     e.preventDefault()
+     setBezirk(e.target.value)
+    }
+ 
     return (
         <>
             !
@@ -17,8 +19,8 @@ const Events = () => {
             <div className="event-flex">
                 <h1 className="event-title-large"> Berlin street events: </h1>
 
-                <label htmlFor="location">Sort by Location:</label>
-                <select name="location" id="locaton">
+                <label htmlFor="bezirk">Sort by Location:</label>
+                <select name="bezirk" id="bezirk" onChange={handleBezirkChange}>
                     <option value="All">All</option>
                     <option value="Mitte">Mitte</option>
                     <option value="Friedrichshain-Kreuzberg">Friedrichshain-Kreuzberg</option>
@@ -37,7 +39,7 @@ const Events = () => {
 
                 {/* <EventCard key={item.id} item={item}/> */}
 
-                {data.map(item =>
+                {data.filter(item => item.bezirk === bezirk).map(item =>
 
                     <EventCard key={item.id} item={item} />)}
             </div>
