@@ -1,17 +1,32 @@
-import data from '../data'
+import dataset from '../data'
 import EventCard from '../components/EventCard';
 import { useState } from 'react';
 import './Events.css'
 
 const Events = () => {
 
+
+    const [data, setData] = useState(dataset)
     const [bezirk, setBezirk] = useState('Mitte')
-    
-    const handleBezirkChange = (e) => {
-     e.preventDefault()
-     setBezirk(e.target.value)
+
+
+
+
+    let filteredList = []
+
+    if (bezirk !== 'All') {
+        filteredList = data.filter(item => bezirk === item.bezirk)
+    } else if (bezirk === 'All') {
+        filteredList = data
     }
- 
+
+    const handleBezirkChange = (e) => {
+        e.preventDefault()
+        setBezirk(e.target.value)
+
+    }
+
+
     return (
         <>
             !
@@ -32,14 +47,14 @@ const Events = () => {
                     <option value="Reinickendorf">Reinickendorf</option>
                     <option value="Lichtenberg">Lichtenberg</option>
                     <option value="Marzahn-Hellersdorf">Marzahn-Hellersdorf</option>
-                    
+
                     <option value="Charlottenburg-Wilmersdorf">Charlottenburg-Wilmersdorf</option>
                 </select>
 
 
-                {/* <EventCard key={item.id} item={item}/> */}
 
-                {data.filter(item => item.bezirk === bezirk).map(item =>
+
+                {filteredList.map(item =>
 
                     <EventCard key={item.id} item={item} />)}
             </div>
