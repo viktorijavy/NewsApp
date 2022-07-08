@@ -1,9 +1,6 @@
 import './EventCard.css'
 
 const EventCard = ({ item }) => {
-
-
-
     return (
         <div className="event-container">
             <div className="event-text">
@@ -14,7 +11,7 @@ const EventCard = ({ item }) => {
              
                 <p>Organiser: {item.veranstalter}</p>
                 <p>{item.strasse}, {item.plz} Berlin</p>
-                <a className="event-btn" href={item.www} target="_blank" rel="noreferrer noopener"> Website</a>
+                <a className="event-btn" href={item.www.startsWith('http') ? item.www : "http://" + item.www } target="_blank" rel="noreferrer noopener"> Website</a>
             </div>
         </div>
     )
