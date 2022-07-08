@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Search from '../components/Search';
 import ArticleCard from '../components/ArticleCard';
 import './SearchNews.css'
 
@@ -12,10 +11,14 @@ const SearchNews = () => {
     const [query, setQuery] = useState('Ukraine')
     const [isLoading, setIsLoading] = useState(true)
 
-    
+    const handleSearch = (e) => {
+        e.preventDefault()
+        
+    }
+
 
     useEffect(() => {
-        axios.get('http://localhost:4000/news') // TODO put host (not endpoint /api) in seperate env vairable because in production will be different
+        axios.get(`http://localhost:4000/news`) // TODO put host (not endpoint /api) in seperate env vairable because in production will be different
 
             .then((response) => {
                 console.log(response)
@@ -31,16 +34,28 @@ const SearchNews = () => {
     return (
 
         <div className="holder-container">
-         
+
 
             <header className="showcase">
                 <div className="overlay">
                     <h1 className='text-center'> viewing articles about {query}</h1>
 
-                    <Search searchText={(text) => setQuery(text)} />
+                    {/* <Search searchText={(text) => setQuery(text)} /> */}
+                    <form onSubmit={handleSearch} className="form">
+                        <input
+                            className="input-text"
+                            type="text"
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
+                            placeholder="e.g. Trump"
+
+                        />
+
+
+                    </form>
                 </div>
 
-            </header> 
+            </header>
 
             {isLoading ? (
 
@@ -49,7 +64,7 @@ const SearchNews = () => {
             ) : (
 
                 <section className='card grid'>
-                
+
                     {articles.length === 0 ? <p>Nothing to show here</p> : articles.map(article =>
 
                         <ArticleCard key={Math.random().toString(32).slice(2, 8)} article={article} />

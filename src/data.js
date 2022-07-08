@@ -864,7 +864,7 @@ const data = [
     zeit: "11:00",
     veranstalter: "Regenbogenfonds e. V., Fuggerstr. 7, 10777 Berlin, Tel.: 21 47 35 86, Fax: 21 47 35 88",
     mail: "info@stadtfest.berlin.de",
-    www: "www.stadtfest.berlin.de",
+    www: "https://www.stadtfest.berlin/en/index.html",
     bemerkungen: "Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz",
     bild: "/sen/web/service/maerkte-feste/strassen-volksfeste/assets/motzblick600.jpg",
     copyright: "Brigitte Dummer",
