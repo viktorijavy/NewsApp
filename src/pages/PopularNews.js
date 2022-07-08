@@ -25,7 +25,7 @@ const PopularNews = () => {
 
     return (
     
-        <>
+        <div className="holder-container">
             <header  className="showcase">
                 <div className="overlay">
                     <h1 className='text-center'> Trending news in {country} </h1>
@@ -41,7 +41,7 @@ const PopularNews = () => {
  
             </section>
 
-        </>
+        </div>
     )
 }
 

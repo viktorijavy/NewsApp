@@ -1176,23 +1176,7 @@ const data = [
     copyright: "",
     rss_titel: "28. Internationales Müggelseeschwimmen"
     },
-    {
-    id: "258",
-    bezirk: "Lichtenberg",
-    bezeichnung: "Wasserfest Rummelsburger Bucht",
-    strasse: "Zillepromenade",
-    plz: "10317",
-    von: "2022-08-27",
-    bis: "2022-08-27",
-    zeit: "12:00-22:30",
-    veranstalter: "SozDia Jugenhilfe, Bildung und Arbeit gGmbH, iKarus stadtteilzentrum",
-    mail: "ikarus@sozdia.de",
-    www: "www.ikarus.sozdia.de",
-    bemerkungen: "",
-    bild: "/sen/web/service/maerkte-feste/strassen-volksfeste/assets/wasserfest_logo_web_220505.jpg",
-    copyright: "Alexander Bittner",
-    rss_titel: "Wasserfest Rummelsburger Bucht"
-    },
+    
     {
     id: "306",
     bezirk: "Friedrichshain-Kreuzberg",

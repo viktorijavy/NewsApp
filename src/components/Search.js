@@ -19,7 +19,7 @@ const Search = ({ searchText }) => {
                     placeholder="e.g. Trump"
                    
                 />
-                {/* <button type="submit" className='btn'>search</button> */}
+               
 
             </form>
            

@@ -1,10 +1,26 @@
+body, html {
+    height: 100%;
+  }
+
 .event-flex {
-    margin-top: 10rem;
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .event-title-large {
     font-size: 4rem;
+    margin-top: 5rem;
+}
+
+.event-background {
+    background-image: url('../images-and-videos/photo-1568738351265-c7065f5d4293.avif');
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }

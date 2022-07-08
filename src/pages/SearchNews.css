@@ -1,12 +1,20 @@
+.holder-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+ 
  .showcase {
-    
+    margin-top: 4rem;
     background-image: 
     url("https://images.unsplash.com/photo-1582079768266-e65af1ad8d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
-    
+    border-radius: 5px;
     background-size: cover;
     background-position: center;
-    width:100%;
-   
+    width:90%;
+    
     
   }
   
@@ -25,9 +33,9 @@
   
   .input-text {
     color: black;
-    width: 80rem;
+    width: 50rem;
     border-radius: 1rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     border:none;
     outline: none;
     
@@ -36,7 +44,7 @@
     outline: none;
   }
   .input-text:active {
-    outline:none;
+    outline: none;
   }
 
   
@@ -55,12 +63,11 @@
   .card {
       margin-left: 3rem;
       margin-top: 5rem;
+      width: 95%;
   }
 
   .grid {
     display: grid;
-    
-    /* grid-template-columns: auto auto auto; */
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     

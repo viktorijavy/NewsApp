@@ -5,6 +5,7 @@ import ArticleCard from '../components/ArticleCard';
 import './SearchNews.css'
 
 
+
 const SearchNews = () => {
 
     const [articles, setArticles] = useState([])
@@ -29,7 +30,8 @@ const SearchNews = () => {
 
     return (
 
-        <div>
+        <div className="holder-container">
+         
 
             <header className="showcase">
                 <div className="overlay">
@@ -38,7 +40,7 @@ const SearchNews = () => {
                     <Search searchText={(text) => setQuery(text)} />
                 </div>
 
-            </header>
+            </header> 
 
             {isLoading ? (
 
@@ -47,7 +49,7 @@ const SearchNews = () => {
             ) : (
 
                 <section className='card grid'>
-
+                
                     {articles.length === 0 ? <p>Nothing to show here</p> : articles.map(article =>
 
                         <ArticleCard key={Math.random().toString(32).slice(2, 8)} article={article} />
