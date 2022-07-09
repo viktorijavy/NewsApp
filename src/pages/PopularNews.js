@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import ArticleCard from '../components/ArticleCard';
+import loading from '../images-and-videos/Design ohne Titel (2).gif'
 
 
 
@@ -11,6 +12,7 @@ const PopularNews = () => {
 
     const [articles, setArticles] = useState([])
     const [country, setCountry] = useState('lt')
+    const [isLoading, setIsLoading] = useState(true)
 
     const handleCountry = (e) => {
         e.preventDefault()
@@ -22,6 +24,7 @@ const PopularNews = () => {
             .then(response => {
                 console.log(response)
                 setArticles(response.data.payload.articles)
+                setIsLoading(false)
 
             })
             .catch(error => console.log(error))
@@ -52,11 +55,17 @@ const PopularNews = () => {
 
             </header>
 
-            <section className='card grid'>
+            {isLoading ? (
+                <img src={loading} alt="" className="loading"/>
+            ) : (
+                <section className='card grid'>
 
-                {articles.map(article => <ArticleCard key={Math.random().toString(32).slice(2, 8)} article={article} />)}
+                    {articles.map(article => <ArticleCard key={Math.random().toString(32).slice(2, 8)} article={article} />)}
 
-            </section>
+                </section>
+
+            )}
+
 
         </div>
     )

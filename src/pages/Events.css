@@ -16,11 +16,15 @@ body, html {
 }
 
 .event-background {
-    background-image: url('../images-and-videos/photo-1568738351265-c7065f5d4293.avif');
+    background-image: url('../images-and-videos/events1.png');
     height: 100%; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+
+#bezirk {
+    margin-top: 1rem;
 }

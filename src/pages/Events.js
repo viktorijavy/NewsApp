@@ -30,7 +30,7 @@ const Events = () => {
                 <div className="event-flex">
                     <h1 className="event-title-large"> Berlin street events: </h1>
 
-                    <label htmlFor="bezirk">Sort by Location:</label>
+                    <label htmlFor="bezirk">Sort by neighborhood:</label>
                     <select name="bezirk" id="bezirk" onChange={handleBezirkChange}>
                         <option value="All">All</option>
                         <option value="Mitte">Mitte</option>

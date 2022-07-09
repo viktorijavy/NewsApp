@@ -18,7 +18,7 @@ const ArticleCard = ({ article }) => {
                         : <p className="mt-3"> {article.content}</p>}
                         <p className="date"> {article.publishedAt.slice(0, 10)}</p>
                         <div>
-                            <a className="button" href={article.url} target="_blank" rel="noreferrer noopener"> Go to source </a>
+                            <a className="button" href={article.url} target="_blank" rel="noreferrer noopener"> Website </a>
                         </div>
                     </div>
 

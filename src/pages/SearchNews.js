@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import ArticleCard from '../components/ArticleCard';
+import loading from '../images-and-videos/Design ohne Titel (2).gif'
 import './SearchNews.css'
 
 
@@ -40,12 +41,10 @@ const SearchNews = () => {
                 <div className="overlay">
                     <h1 className='text-center'> viewing articles about {query}</h1>
 
-                    {/* <Search searchText={(text) => setQuery(text)} /> */}
                     <form onSubmit={handleSearch} className="form">
                         <input
                             className="input-text"
                             type="text"
-                            value={query}
                             onChange={(e) => setQuery(e.target.value)}
                             placeholder="e.g. Trump"
 
@@ -59,7 +58,7 @@ const SearchNews = () => {
 
             {isLoading ? (
 
-                <h1>Loading...</h1>
+                <img src={loading} alt="" className="loading"/>
 
             ) : (
 
