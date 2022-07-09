@@ -31,41 +31,44 @@ const WeatherCard = (props) => {
         </div>
 
         <div className="weather-card-text">
+           
+           {props.data ? 
+            <h1> {props.data.city.name} </h1>
+           : null}
+       
 
-          <h1> {props.data.name} </h1>
+           {props.data.list ?
 
-          {props.data.main ?
-
-            <h1>{Math.round(props.data.main.temp)} °C</h1>
+            <h1>{Math.round(props.data.list[0].main.temp)} °C</h1>
 
             : null}
 
-          {props.data.weather ?
+          {props.data.list[0].weather ?
             <>
-              <h2> {props.data.weather[0].description}</h2>
+              <h2> {props.data.list[0].weather[0].description}</h2>
 
-              {props.data.weather[0].description.includes('clouds') &&
+              {props.data.list[0].weather[0].main.includes('Clouds') &&
 
                 <img className="w-logo" src={cloudyIcon} alt="cloudy-pic" />}
 
-              {props.data.weather[0].description.includes('clear') &&
+              {props.data.list[0].weather[0].main.includes('Clear') &&
 
                 <img className="w-logo" src={sunnyIcon} alt="sunny-pic" />}
 
-              {props.data.weather[0].description.includes('rain') &&
+              {props.data.list[0].weather[0].main.includes('Rain') &&
 
                 <img className="w-logo" src={rainyIcon} alt="rainy-icon" />}
 
             </>
             : null
-          }
+          } 
 
-          {props.data.main ?
-            <p> Feels like: {Math.round(props.data.main.feels_like)} </p>
+           {props.data.list ?
+            <p> Feels like: {Math.round(props.data.list[0].main.feels_like)} </p>
             : null}
 
-          {props.data.main ?
-            <p> Humidity: {props.data.main.humidity}</p>
+          {props.data.list ?
+            <p> Humidity: {props.data.list[0].main.humidity}</p>
             : null}
         </div>
 

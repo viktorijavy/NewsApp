@@ -8,21 +8,14 @@ import './Weather.css';
 
 const Weather = () => {
 
-
-
     const API_KEY2 = process.env.REACT_APP_WEATHER_API_KEY
 
     const [city, setCity] = useState('berlin')
     const [data, setData] = useState([])
 
     useEffect(() => {
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY2}`)
-
-            // `http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=metric&cnt=7&appid={API_KEY2}`
-
+        axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY2}`)
             .then(response => {
-
-
                 setData(response.data)
                 console.log(response.data)
             })
@@ -35,23 +28,21 @@ const Weather = () => {
 
         <>
             <div className='video-wrapper'>
-
-
-                {data.weather ?
+                {data.list ?
 
                     <video className="video1" autoPlay="autoplay" loop="loop" muted>
 
-                        {data.weather[0].description.includes('clouds') && <source
+                        {data.list[0].weather[0].main.includes('Clouds') && <source
                             src={cloudyBackground}
                             type="video/mp4"
                         />}
 
-                        {data.weather[0].description.includes('rain') && <source
+                        {data.list[0].weather[0].main.includes('Rain') && <source
                             src={backgroundvideo}
                             type="video/mp4"
                         />}
 
-                        {data.weather[0].description.includes('clear') && <source
+                        {data.list[0].weather[0].main.includes('Clear') && <source
                             src={sunnyBackground}
                             type="video/mp4"
                         />}
