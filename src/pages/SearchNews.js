@@ -9,7 +9,7 @@ import './SearchNews.css'
 const SearchNews = () => {
 
     const [articles, setArticles] = useState([])
-    const [query, setQuery] = useState('Ukraine')
+    const [query, setQuery] = useState('')
     const [isLoading, setIsLoading] = useState(true)
 
     const handleSearch = (e) => {
@@ -17,9 +17,11 @@ const SearchNews = () => {
         
     }
 
-
     useEffect(() => {
-        axios.get(`http://localhost:4000/news`) // TODO put host (not endpoint /api) in seperate env vairable because in production will be different
+        
+        const searchTerm = query ? `http://localhost:4000/news?search=${query}` :  "http://localhost:4000/news"
+       
+        axios.get(searchTerm) // TODO put host (not endpoint /api) in seperate env vairable because in production will be different
 
             .then((response) => {
                 console.log(response)
@@ -29,7 +31,8 @@ const SearchNews = () => {
             .catch(error => {
                 console.log(error)
             })
-    }, [])
+     
+    }, [query])
 
 
     return (

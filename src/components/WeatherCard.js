@@ -32,18 +32,18 @@ const WeatherCard = (props) => {
 
         <div className="weather-card-text">
            
-           {props.data ? 
+           {props.data.city ? 
             <h1> {props.data.city.name} </h1>
            : null}
        
 
-           {props.data.list ?
+           {props.data.list[0] ?
 
             <h1>{Math.round(props.data.list[0].main.temp)} °C</h1>
 
             : null}
 
-          {props.data.list[0].weather ?
+          {props.data.list[0].weather[0] ?
             <>
               <h2> {props.data.list[0].weather[0].description}</h2>
 
@@ -63,11 +63,11 @@ const WeatherCard = (props) => {
             : null
           } 
 
-           {props.data.list ?
+           {props.data.list[0] ?
             <p> Feels like: {Math.round(props.data.list[0].main.feels_like)} </p>
             : null}
 
-          {props.data.list ?
+          {props.data.list[0] ?
             <p> Humidity: {props.data.list[0].main.humidity}</p>
             : null}
         </div>
