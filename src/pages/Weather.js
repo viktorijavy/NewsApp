@@ -29,6 +29,7 @@ const Weather = () => {
         <>
             <div className='video-wrapper'>
                 {data.list ?
+                    <>
 
                     <video className="video1" autoPlay="autoplay" loop="loop" muted>
 
@@ -48,9 +49,11 @@ const Weather = () => {
                         />}
 
                     </video>
+                        <WeatherCard data={data} searchCity={(text => setCity(text))} />
+                    </>
                     : null}
 
-                <WeatherCard data={data} searchCity={(text => setCity(text))} />
+
 
             </div>
 
