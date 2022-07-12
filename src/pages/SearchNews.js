@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import ArticleCard from '../components/ArticleCard';
 import loading from '../images-and-videos/Design ohne Titel (2).gif'
@@ -12,16 +12,9 @@ const SearchNews = () => {
     const [query, setQuery] = useState('')
     const [isLoading, setIsLoading] = useState(true)
 
-    const handleSearch = (e) => {
-        e.preventDefault()
+    const fetchArticles = useCallback((searchQuery) => {
         
-    }
-
-    useEffect(() => {
-        
-        const searchTerm = query ? `http://localhost:4000/news?search=${query}` :  "http://localhost:4000/news"
-       
-        axios.get(searchTerm) // TODO put host (not endpoint /api) in seperate env vairable because in production will be different
+        axios.get(searchQuery)
 
             .then((response) => {
                 console.log(response)
@@ -31,8 +24,21 @@ const SearchNews = () => {
             .catch(error => {
                 console.log(error)
             })
-     
-    }, [query])
+    }, [setArticles, setIsLoading])
+
+    const handleSearch = (e) => {
+        e.preventDefault()
+      
+        const searchTerm = query ? `http://localhost:4000/news?search=${query}` : "http://localhost:4000/news"
+        fetchArticles(searchTerm)
+    }
+
+    useEffect(() => {
+
+        fetchArticles("http://localhost:4000/news")
+
+
+    }, [])
 
 
     return (
@@ -53,8 +59,9 @@ const SearchNews = () => {
 
                         />
 
-
+                        <button type="submit">Search</button>
                     </form>
+
                 </div>
 
             </header>

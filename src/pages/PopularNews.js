@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import ArticleCard from '../components/ArticleCard';
@@ -8,27 +8,31 @@ import loading from '../images-and-videos/Design ohne Titel (2).gif'
 
 const PopularNews = () => {
 
-
-
     const [articles, setArticles] = useState([])
-    const [country, setCountry] = useState('lt')
+    const [country, setCountry] = useState('us')
     const [isLoading, setIsLoading] = useState(true)
 
+
+    const fetchArticles = useCallback((searchQuery) => {
+        axios.get(searchQuery)
+        .then(response => {
+                    console.log(response)
+                    setArticles(response.data.payload.articles)
+                    setIsLoading(false)
+        
+                })
+                .catch(error => console.log(error))
+    }, [])
+    
     const handleCountry = (e) => {
         e.preventDefault()
+        fetchArticles(`http://localhost:4000/country-news?search=${country}`)
     }
 
-
     useEffect(() => {
-        axios.get('http://localhost:4000/country-news')
-            .then(response => {
-                console.log(response)
-                setArticles(response.data.payload.articles)
-                setIsLoading(false)
-
-            })
-            .catch(error => console.log(error))
+      fetchArticles(`http://localhost:4000/country-news?search=${country}`)
     }, [])
+
 
     return (
 
@@ -47,8 +51,7 @@ const PopularNews = () => {
                             placeholder=" type in country code, e.g. lt"
 
                         />
-
-
+                        <button type="submit">Search</button>
                     </form>
 
                 </div>
