@@ -4,6 +4,7 @@ import backgroundvideo from '../images-and-videos/rainy.mp4'
 import cloudyBackground from '../images-and-videos/cloudySky.mp4'
 import sunnyBackground from '../images-and-videos/sunshine.mp4'
 import WeatherCard from '../components/WeatherCard';
+import WeeklyWeatherCard from '../components/WeeklyWeatherCard';
 import './Weather.css';
 
 const Weather = () => {
@@ -50,6 +51,7 @@ const Weather = () => {
 
                     </video>
                         <WeatherCard data={data} searchCity={(text => setCity(text))} />
+                        
                     </>
                     : null}
 

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import sunnyIcon from '../images-and-videos/clear-sky.png'
 import cloudyIcon from '../images-and-videos/cloudy.png'
 import rainyIcon from '../images-and-videos/Rainy.png'
+import WeeklyWeatherCard from './WeeklyWeatherCard'
 
 
 const WeatherCard = (props) => {
@@ -29,9 +30,11 @@ const WeatherCard = (props) => {
           </form>
         </div>
 
+        <div className="weather-cards-horizontal">
+
         <div className="weather-card-text">
 
-          <h1> {props.data.city.name} </h1>
+          <h1> {props.data.city.name}, {props.data.city.country} </h1>
 
           <h1>{Math.round(props.data.list[0].main.temp)}°C</h1>
 
@@ -49,6 +52,12 @@ const WeatherCard = (props) => {
           <p> Feels like: {Math.round(props.data.list[0].main.feels_like)}°C </p>
 
           <p> Humidity: {props.data.list[0].main.humidity}</p>
+        </div>
+
+         <div>
+          <WeeklyWeatherCard data={props.data}/>
+         </div>
+
         </div>
       </div>
     </>
