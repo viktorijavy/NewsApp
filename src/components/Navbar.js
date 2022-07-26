@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
+import logo from '../images-and-videos/logo.png'
 
 const Navbar = () => {
 
@@ -21,7 +22,12 @@ const Navbar = () => {
                     <li><Link style={{ textDecoration: "none" }} to={'/popular-news'}> Trending News</Link></li>
                     <li><Link style={{ textDecoration: "none" }} to={'/weather'}> Weather</Link></li>
                 </ul>
-                <h1 className="logo">NEWS</h1>
+
+                <div className="logo">
+                <img src={logo} alt="" className="logo-img"/>
+                <h1>NEWS</h1>
+                </div>
+               
             </div>
         </nav>
 

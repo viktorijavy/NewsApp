@@ -10,7 +10,7 @@ const Weather = () => {
 
     const API_KEY2 = process.env.REACT_APP_WEATHER_API_KEY
 
-    const [city, setCity] = useState('berlin')
+    const [city, setCity] = useState('druskininkai')
     const [data, setData] = useState([])
 
     useEffect(() => {

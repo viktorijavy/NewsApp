@@ -26,52 +26,30 @@ const WeatherCard = (props) => {
               placeholder='search by city'
               onChange={(e) => setText(e.target.value)}
             />
-
           </form>
         </div>
 
         <div className="weather-card-text">
-           
-           {props.data.city ? 
-            <h1> {props.data.city.name} </h1>
-           : null}
-       
 
-           {props.data.list[0] ?
+          <h1> {props.data.city.name} </h1>
 
-            <h1>{Math.round(props.data.list[0].main.temp)} °C</h1>
+          <h1>{Math.round(props.data.list[0].main.temp)}°C</h1>
 
-            : null}
+          <h2> {props.data.list[0].weather[0].description}</h2>
 
-          {props.data.list[0].weather[0] ?
-            <>
-              <h2> {props.data.list[0].weather[0].description}</h2>
+          {props.data.list[0].weather[0].main.includes('Clouds') &&
+            <img className="w-logo" src={cloudyIcon} alt="cloudy-pic" />}
 
-              {props.data.list[0].weather[0].main.includes('Clouds') &&
+          {props.data.list[0].weather[0].main.includes('Clear') &&
+            <img className="w-logo" src={sunnyIcon} alt="sunny-pic" />}
 
-                <img className="w-logo" src={cloudyIcon} alt="cloudy-pic" />}
+          {props.data.list[0].weather[0].main.includes('Rain') &&
+            <img className="w-logo" src={rainyIcon} alt="rainy-icon" />}
 
-              {props.data.list[0].weather[0].main.includes('Clear') &&
+          <p> Feels like: {Math.round(props.data.list[0].main.feels_like)}°C </p>
 
-                <img className="w-logo" src={sunnyIcon} alt="sunny-pic" />}
-
-              {props.data.list[0].weather[0].main.includes('Rain') &&
-
-                <img className="w-logo" src={rainyIcon} alt="rainy-icon" />}
-
-            </>
-            : null
-          } 
-
-           {props.data.list[0] ?
-            <p> Feels like: {Math.round(props.data.list[0].main.feels_like)} </p>
-            : null}
-
-          {props.data.list[0] ?
-            <p> Humidity: {props.data.list[0].main.humidity}</p>
-            : null}
+          <p> Humidity: {props.data.list[0].main.humidity}</p>
         </div>
-
       </div>
     </>
   )
