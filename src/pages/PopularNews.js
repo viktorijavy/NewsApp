@@ -16,10 +16,8 @@ const PopularNews = () => {
     const fetchArticles = useCallback((searchQuery) => {
         axios.get(searchQuery)
         .then(response => {
-                    console.log(response)
                     setArticles(response.data.payload.articles)
-                    setIsLoading(false)
-        
+                    setIsLoading(false)      
                 })
                 .catch(error => console.log(error))
     }, [])
@@ -41,21 +39,15 @@ const PopularNews = () => {
                 <div className="overlay">
                     <h1 className='text-center'> Trending news in {country} </h1>
 
-
-
                     <form onSubmit={handleCountry} className="form">
                         <input
                             className="input-text"
                             type="text"
                             onChange={(e) => setCountry(e.target.value)}
                             placeholder=" type in country code, e.g. lt"
-
-                        />
-                        <button type="submit">Search</button>
+                        />                   
                     </form>
-
                 </div>
-
             </header>
 
             {isLoading ? (

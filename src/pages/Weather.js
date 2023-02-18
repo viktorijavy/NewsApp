@@ -17,7 +17,6 @@ const Weather = () => {
         axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY2}`)
             .then(response => {
                 setData(response.data)
-                console.log(response.data)
             })
 
             .catch(error => console.log(error))
@@ -28,11 +27,10 @@ const Weather = () => {
 
         <>
             <div className='video-wrapper'>
-                {data.list ?
-                    <>
-
+            {data.list ?
+                    <>              
                     <video className="video1" autoPlay="autoplay" loop="loop" muted>
-
+              
                         {data.list[0].weather[0].main.includes('Clouds') && <source
                             src={cloudyBackground}
                             type="video/mp4"
@@ -51,9 +49,7 @@ const Weather = () => {
                     </video>
                         <WeatherCard data={data} searchCity={(text => setCity(text))} />
                     </>
-                    : null}
-
-
+                    : <p> Error while fetching weather data</p>}
 
             </div>
 

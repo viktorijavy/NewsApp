@@ -8,7 +8,7 @@ import rainyIcon from '../images-and-videos/Rainy.png'
 const WeatherCard = (props) => {
 
   const [text, setText] = useState('')
-
+  
   const handleSubmit = e => {
     e.preventDefault()
     props.searchCity(text)
@@ -17,7 +17,6 @@ const WeatherCard = (props) => {
   return (
     <>
       <div className="weather-card">
-
         <div>
           <form onSubmit={handleSubmit}>
             <input
@@ -31,7 +30,7 @@ const WeatherCard = (props) => {
 
         <div className="weather-card-text">
 
-          <h1> {props.data.city.name} </h1>
+          <h1> {props.data.city.name}, {props.data.city.country} </h1>
 
           <h1>{Math.round(props.data.list[0].main.temp)}°C</h1>
 
