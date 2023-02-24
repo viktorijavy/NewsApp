@@ -8,7 +8,7 @@ import rainyIcon from '../images-and-videos/Rainy.png'
 const WeatherCard = (props) => {
 
   const [text, setText] = useState('')
-  
+
   const handleSubmit = e => {
     e.preventDefault()
     props.searchCity(text)
