@@ -50,7 +50,7 @@ const SearchNews = () => {
             ) : (
                 <section className='card grid'>
                      {articles.map(article =>
-                        <ArticleCard key={Math.random().toString(32).slice(2, 8)} article={article} />
+                        <ArticleCard key={article.url} article={article} />
                     )}
                 </section>
             )}
